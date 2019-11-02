@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public bool isShootingLeft;
+    public bool isShooting;
     public bool isUsingGravity;
     bool notOnGround = true;
     public bool jumping = false;
@@ -17,18 +17,37 @@ public class Enemy : MonoBehaviour
     bool canShoot = true;
     public bool isMoving;
     public GameObject toObject;
-    public Vector3 origPoint;
+    Vector3 origPoint;
     bool reached = false;
     float distance;
     public float movingSpeed = 1f;
+    GameObject player;
+    public LayerMask wallsMask;
+    bool seeingPlayer;
+    Vector3 toPlayer;
 
     private void Start()
     {
         origPoint = transform.position;
         movingSpeed = movingSpeed * Time.deltaTime;
+        player = FindObjectOfType<PlayerMover>().gameObject;
     }
+    //void SeeingPlayer()
+    //{
+    //    var direction = player.transform.position - transform.position;
+    //    if (Physics.Raycast(transform.position, direction, Vector3.Distance(transform.position, player.transform.position), wallsMask))
+    //    {
+    //        seeingPlayer = false;
+    //    }
+    //    else seeingPlayer = true;
+    //    Debug.DrawLine(transform.position, player.transform.position, Color.red);
+
+    //}
     private void Update()
     {
+        toPlayer = player.transform.position - transform.position;
+        bulletPrefab.GetComponent<Bullet>().direction = toPlayer;
+        //SeeingPlayer();
         if (isUsingGravity)
         {
             if (notOnGround && !jumping)
@@ -36,9 +55,9 @@ public class Enemy : MonoBehaviour
                 gameObject.transform.position += Vector3.down * Time.deltaTime * fallingSpeed;
             }
         }
-        if (isShootingLeft && canShoot)
+        if (isShooting && canShoot)
         {
-            Instantiate(bulletPrefab, gameObject.transform.position, rotation, parent.transform);
+            Instantiate(bulletPrefab, transform.position, rotation, parent.transform);
             canShoot = false;
         }
         if (!canShoot)
