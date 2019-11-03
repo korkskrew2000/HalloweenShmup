@@ -502,6 +502,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 628448662017992532}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1168293608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7684087319251962678, guid: 96734793d366a6c48b47c7de8541ecc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 628448662017992532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168293607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7244c1133ced2e44fb571d41f2731488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1168293609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 628448661000706493, guid: 96734793d366a6c48b47c7de8541ecc8,
@@ -712,8 +724,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692573313}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -3.01, y: 2.028, z: 0}
-  m_LocalScale: {x: 5, y: 0.2, z: 1}
+  m_LocalPosition: {x: -3.866, y: 2.028, z: 0}
+  m_LocalScale: {x: 5, y: 1.913, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -978,6 +990,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 1950482089}
+    - target: {fileID: 628448661000706492, guid: 96734793d366a6c48b47c7de8541ecc8,
+        type: 3}
+      propertyPath: chargeShot
+      value: 
+      objectReference: {fileID: 1168293608}
     - target: {fileID: 7684087319251962678, guid: 96734793d366a6c48b47c7de8541ecc8,
         type: 3}
       propertyPath: chargeShotPrefab
@@ -993,6 +1010,26 @@ PrefabInstance:
         type: 3}
       propertyPath: chargeTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684087319251962678, guid: 96734793d366a6c48b47c7de8541ecc8,
+        type: 3}
+      propertyPath: launchTimeLimit
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684087319251962678, guid: 96734793d366a6c48b47c7de8541ecc8,
+        type: 3}
+      propertyPath: launchSpeed
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684087319251962678, guid: 96734793d366a6c48b47c7de8541ecc8,
+        type: 3}
+      propertyPath: launchMoveSpeedMax
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684087319251962678, guid: 96734793d366a6c48b47c7de8541ecc8,
+        type: 3}
+      propertyPath: launchMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96734793d366a6c48b47c7de8541ecc8, type: 3}
