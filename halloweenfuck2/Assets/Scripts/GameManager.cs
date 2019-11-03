@@ -19,10 +19,7 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public GameObject player;
     public Vector3 offset;
-    private void Awake()
-    {
-
-    }
+    
     public void PlayerHit()
     {
         //if (lives == 0)

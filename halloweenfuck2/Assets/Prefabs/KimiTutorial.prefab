@@ -173,7 +173,6 @@ Transform:
   - {fileID: 4615234756236912265}
   - {fileID: 9074698303741875992}
   - {fileID: 9074698304582292920}
-  - {fileID: 7326031162281189590}
   - {fileID: 7326031161125114951}
   - {fileID: 7326031160794821546}
   - {fileID: 7326031161649034709}
@@ -313,7 +312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1950150051303017540
 MonoBehaviour:
@@ -1788,7 +1787,7 @@ Transform:
   m_LocalScale: {x: 0.6060144, y: 0.6060144, z: 0.6060144}
   m_Children: []
   m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7326031160794821549
 SpriteRenderer:
@@ -2228,7 +2227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7326031161102206686
 MonoBehaviour:
@@ -2310,7 +2309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7326031161133686253
 GameObject:
@@ -2342,7 +2341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7326031161133686251
 MonoBehaviour:
@@ -2948,7 +2947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7326031161649034708
 SpriteRenderer:
@@ -3579,11 +3578,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7326031162281189593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.355877, y: 1.5757734, z: 94.37154}
+  m_LocalPosition: {x: 0, y: -0.04699993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2486369539090582958}
-  m_RootOrder: 35
+  m_Father: {fileID: 9074698303741875992}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7326031162281189591
 SpriteRenderer:
@@ -3905,7 +3904,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.355877, y: 1.6227733, z: 94.37154}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7326031162281189590}
   m_Father: {fileID: 2486369539090582958}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

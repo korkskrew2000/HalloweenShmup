@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b81cd15243912444b5c9c6aed004b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 0.5
   bulletTimer: 7
   goingLeft: 1
   shotByPlayer: 0
