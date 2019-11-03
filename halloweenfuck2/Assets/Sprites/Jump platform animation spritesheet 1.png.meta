@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 6492fe7f29bf36b45b82a7b8dba1e59a
+guid: f850781282efb7f49afcc360babef253
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3456848847672772015
-    second: Jump platform animation spritesheet_0
+      213: 244101440795336758
+    second: Jump platform animation spritesheet 1_0
   - first:
-      213: 9044334458616137205
-    second: Jump platform animation spritesheet_1
+      213: -8199456306171555531
+    second: Jump platform animation spritesheet 1_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -37,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -92,13 +92,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump platform animation spritesheet_0
+      name: Jump platform animation spritesheet 1_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 2
         y: 2
-        width: 18
-        height: 6
+        width: 26
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,20 +106,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7b7e863861079649818c6e9c4fddf09
-      internalID: 3456848847672772015
+      spriteID: cd8044be2a6bcb745a7e3d74829806ed
+      internalID: 244101440795336758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump platform animation spritesheet_1
+      name: Jump platform animation spritesheet 1_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 2
-        width: 18
-        height: 10
+        width: 26
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f12f34ff46c22447abdb1f4ff4e8ce6
-      internalID: 9044334458616137205
+      spriteID: 4b4415f672b4d8e4d90c1f6e67a8be75
+      internalID: -8199456306171555531
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 400c93f8b31f23545863eafcbe26b246
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
