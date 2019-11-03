@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 6369246750064077405}
   - component: {fileID: 6369246750064077404}
   - component: {fileID: 6369246750064077406}
+  - component: {fileID: 2169581399901331293}
   m_Layer: 14
   m_Name: Hatch
   m_TagString: Untagged
@@ -154,13 +155,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6369246750064077403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014740169, y: -0.03492999}
+  m_Offset: {x: 0.0151795745, y: -0.03492999}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -171,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0294803, y: 0.165797}
+  m_Size: {x: 1.0893198, y: 0.165797}
   m_EdgeRadius: 0
 --- !u!114 &6369246750064077406
 MonoBehaviour:
@@ -190,3 +191,32 @@ MonoBehaviour:
   ticksToClose: 7
   tm: {fileID: 0}
   hatchAnimation: {fileID: 6369246749982706008}
+  collider: {fileID: 2169581399901331293}
+  trigger: {fileID: 6369246750064077404}
+  instaKill: 0
+--- !u!61 &2169581399901331293
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369246750064077403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.023935854, y: -0.05086355}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5624906, y: 0.2639748}
+  m_EdgeRadius: 0

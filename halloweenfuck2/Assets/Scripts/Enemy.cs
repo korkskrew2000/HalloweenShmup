@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     public LayerMask wallsMask;
     bool seeingPlayer;
     Vector3 toPlayer;
+    public bool isPumpkin;
 
     private void Start()
     {
@@ -104,7 +105,7 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Default")) { notOnGround = false; }
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet") && !isPumpkin)
         {
             Destroy(gameObject);
         }
