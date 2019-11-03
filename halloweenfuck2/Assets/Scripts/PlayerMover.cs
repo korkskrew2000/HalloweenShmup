@@ -12,6 +12,7 @@ public class PlayerMover : MonoBehaviour
     public float shootingCooldown = 0.75f;
     float timer = 0f;
     public bool canShoot = true;
+    Vector3 shootingOffset = new Vector3(0.35f, 0, 0);
     public Transform bulletParent;
     public bool notOnGround = true;
     public bool jumping = false;
@@ -26,6 +27,7 @@ public class PlayerMover : MonoBehaviour
     public float minY = 0;
     public GameObject minYsensor;
     public ChargeShot chargeShot;
+    public Animator anim;
 
     void Update()
     {
@@ -57,10 +59,11 @@ public class PlayerMover : MonoBehaviour
             {
                 stoppingSpeed = 0;
             }
+            anim.enabled = false;
         }
         if (Input.GetKeyUp(KeyCode.X) && canShoot && !chargeShot.isCharged)
         {
-            Instantiate(bulletPrefab, gameObject.transform.position, rotation, bulletParent);
+            Instantiate(bulletPrefab, gameObject.transform.position + shootingOffset, rotation, bulletParent);
             canShoot = false;
         }
         if (!canShoot)
@@ -99,6 +102,10 @@ public class PlayerMover : MonoBehaviour
         if (minYsensor.transform.position.y < minY)
         {
             gameObject.transform.position += Vector3.up * Time.deltaTime * maxSpeed;
+        }
+        if (isMoving)
+        {
+            anim.enabled = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

@@ -10,6 +10,7 @@ public class ChargeShot : MonoBehaviour
     public float newCooldown = 2f;
     public bool isCharging = false;
     public bool isCharged = false;
+    Vector3 shootingOffset = new Vector3(0.35f, 0, 0);
     public GameObject chargeShotPrefab;
     bool isLaunching = false;
     float launchTimer = 0;
@@ -21,6 +22,8 @@ public class ChargeShot : MonoBehaviour
     float oldCooldown;
     public Transform bulletsParent;
     Quaternion rotation = new Quaternion(0, 0, 0, 0);
+    bool wasMoving = false;
+    float stoppingTime = 1.6f;
 
     private void Awake()
     {
@@ -28,6 +31,7 @@ public class ChargeShot : MonoBehaviour
     }
     void ChargedShot()
     {
+        stoppingTime = 1.6f;
         chargeTimer = 0;
         isCharged = false;
         playerMover.canShoot = false;
@@ -39,6 +43,7 @@ public class ChargeShot : MonoBehaviour
         if (Input.GetKey(KeyCode.X) && playerMover.canShoot)
         {
             isCharging = true;
+
         }
         if (isCharging)
         {
@@ -82,6 +87,16 @@ public class ChargeShot : MonoBehaviour
                 playerMover.jumping = false;
                 isLaunching = false;
                 launchTimer = 0;
+            }
+            wasMoving = true;
+        }
+        if (!isLaunching && wasMoving)
+        {
+            gameObject.transform.position += Vector3.left * Time.deltaTime * stoppingTime;
+            stoppingTime -= Time.deltaTime * 1.3f;
+            if (stoppingTime < 0.1f)
+            {
+                stoppingTime = 0;
             }
         }
     }
