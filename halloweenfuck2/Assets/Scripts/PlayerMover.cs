@@ -12,7 +12,7 @@ public class PlayerMover : MonoBehaviour
     public float shootingCooldown = 0.75f;
     float timer = 0f;
     public bool canShoot = true;
-    Vector3 shootingOffset = new Vector3(0.35f, 0, 0);
+    Vector3 shootingOffset = new Vector3(0.45f,0.045f, 0);
     public Transform bulletParent;
     public bool notOnGround = true;
     public bool jumping = false;

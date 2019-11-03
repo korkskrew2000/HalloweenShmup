@@ -7,7 +7,6 @@ public class Bomb : MonoBehaviour
     public float explosionRadius;
     GameManager gm;
     public AudioClip explosion;
-    bool blowUp = false;
     public CircleCollider2D trigger;
 
     private void Start()

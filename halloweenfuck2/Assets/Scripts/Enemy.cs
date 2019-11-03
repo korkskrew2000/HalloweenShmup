@@ -33,17 +33,17 @@ public class Enemy : MonoBehaviour
         movingSpeed = movingSpeed * Time.deltaTime;
         player = FindObjectOfType<PlayerMover>().gameObject;
     }
-    //void SeeingPlayer()
-    //{
-    //    var direction = player.transform.position - transform.position;
-    //    if (Physics.Raycast(transform.position, direction, Vector3.Distance(transform.position, player.transform.position), wallsMask))
-    //    {
-    //        seeingPlayer = false;
-    //    }
-    //    else seeingPlayer = true;
-    //    Debug.DrawLine(transform.position, player.transform.position, Color.red);
+    void SeeingPlayer()
+    {
+        var direction = player.transform.position - transform.position;
+        if (Physics.Raycast(transform.position, direction, Vector3.Distance(transform.position, player.transform.position), wallsMask))
+        {
+            seeingPlayer = false;
+        }
+        else seeingPlayer = true;
+        Debug.DrawLine(transform.position, player.transform.position, Color.red);
 
-    //}
+    }
     private void Update()
     {
         toPlayer = player.transform.position - transform.position;
@@ -113,12 +113,23 @@ public class Enemy : MonoBehaviour
         {
             FindObjectOfType<GameManager>().PlayerHit();
         }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            notOnGround = true;
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Default"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            notOnGround = true;
+            notOnGround = false;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            notOnGround = false;
         }
     }
 }

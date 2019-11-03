@@ -36,7 +36,7 @@ public class HatchTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isOpen)
+        if (isOpen && instaKill)
         {
             FindObjectOfType<GameManager>().GetComponent<GameManager>().PlayerHit();
         }
