@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public bool goingLeft = false;
     public bool shotByPlayer;
     public Vector3 direction;
+    public bool isCharged = false;
     void Update()
     {
         gameObject.transform.position += direction * Time.deltaTime * speed;
@@ -25,6 +26,12 @@ public class Bullet : MonoBehaviour
         {
             FindObjectOfType<GameManager>().PlayerHit();
         }
-        Destroy(gameObject);
+        if (isCharged)
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Default"))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

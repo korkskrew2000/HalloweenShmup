@@ -19,8 +19,8 @@ TagManager:
   - EnemyBullet
   - Jumps
   - Walls
-  - 
-  - 
+  - Hatches
+  - Destroyable
   - 
   - 
   - 
