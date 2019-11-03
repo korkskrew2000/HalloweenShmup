@@ -10,6 +10,7 @@ public class ChargeShot : MonoBehaviour
     public float newCooldown = 2f;
     public bool isCharging = false;
     public bool isCharged = false;
+    Vector3 shootingOffset = new Vector3(0.35f, 0, 0);
     public GameObject chargeShotPrefab;
     bool isLaunching = false;
     float launchTimer = 0;
