@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b81cd15243912444b5c9c6aed004b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.3
   bulletTimer: 7
   goingLeft: 1
   shotByPlayer: 0
   direction: {x: 0, y: 0, z: 0}
+  isCharged: 0
 --- !u!50 &8313427082920074217
 Rigidbody2D:
   serializedVersion: 4

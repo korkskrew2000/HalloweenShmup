@@ -28,7 +28,7 @@ public class Bomb : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        
         trigger.enabled = true;
         AudioSource.PlayClipAtPoint(explosion, Camera.main.transform.position);
         Destroy(gameObject, 0.1f);

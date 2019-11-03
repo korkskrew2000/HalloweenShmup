@@ -25,20 +25,20 @@ public class GameManager : MonoBehaviour
     }
     public void PlayerHit()
     {
-        if (lives == 0)
-        {
-            GameOver();
-            return;
-        } else
-        lives--;
+        //if (lives == 0)
+        //{
+        //    GameOver();
+        //    return;
+        //} else
+        //lives--;
         player.transform.position = lastEntry.transform.position + offset;
         player.GetComponent<PlayerMover>().notOnGround = true;
         player.GetComponent<PlayerMover>().jumping = false;
 
     }
-    void GameOver()
-    {
-        Time.timeScale = 0;
-        print("game over!");
-    }
+    //void GameOver()
+    //{
+    //    Time.timeScale = 0;
+    //    print("game over!");
+    //}
 }
