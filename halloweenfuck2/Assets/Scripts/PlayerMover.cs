@@ -11,7 +11,7 @@ public class PlayerMover : MonoBehaviour
     Quaternion rotation = new Quaternion(0, 0, 0, 0);
     public float shootingCooldown = 0.75f;
     float timer = 0f;
-    bool canShoot = true;
+    public bool canShoot = true;
     public Transform bulletParent;
     public bool notOnGround = true;
     public bool jumping = false;
@@ -23,14 +23,17 @@ public class PlayerMover : MonoBehaviour
     public float fallingMultiplier = 3;
     float stoppingSpeed = 0;
     bool isMoving;
+    public float minY = 0;
+    public GameObject minYsensor;
+    public ChargeShot chargeShot;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             speed = 0;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.Z))
         {
             speed += Time.deltaTime * speedMultiplier;
             gameObject.transform.position += Vector3.right * Time.deltaTime * speed;
@@ -41,7 +44,7 @@ public class PlayerMover : MonoBehaviour
             stoppingSpeed = 0.3f;
             isMoving = true;
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow) && jumping)
+        if (Input.GetKeyUp(KeyCode.Z) && jumping)
         {
             stoppingSpeed = stoppingSpeed * 5;
         }
@@ -55,7 +58,7 @@ public class PlayerMover : MonoBehaviour
                 stoppingSpeed = 0;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
+        if (Input.GetKeyUp(KeyCode.X) && canShoot && !chargeShot.isCharged)
         {
             Instantiate(bulletPrefab, gameObject.transform.position, rotation, bulletParent);
             canShoot = false;
@@ -92,6 +95,10 @@ public class PlayerMover : MonoBehaviour
         if (!jumping)
         {
             jumpingSpeed = 0;
+        }
+        if (minYsensor.transform.position.y < minY)
+        {
+            gameObject.transform.position += Vector3.up * Time.deltaTime * maxSpeed;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
