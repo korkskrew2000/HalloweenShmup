@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int roomNumber;
     List<int> roomList = new List<int> { };
     public GameObject lastEntry;
-    public int lives = 3;
+    public int lives = 2;
     public GameObject player;
     public Vector3 offset;
     private void Awake()
@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
         } else
         lives--;
         player.transform.position = lastEntry.transform.position + offset;
+        player.GetComponent<PlayerMover>().notOnGround = true;
+        player.GetComponent<PlayerMover>().jumping = false;
 
     }
     void GameOver()

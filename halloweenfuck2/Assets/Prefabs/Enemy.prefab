@@ -80,7 +80,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2232872812031815906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e8f74f550a72a49bcd351390341b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShootingLeft: 0
+  isShooting: 0
   isUsingGravity: 1
   jumping: 0
   fallingSpeed: 0.5
@@ -101,6 +101,12 @@ MonoBehaviour:
     type: 3}
   parent: {fileID: 0}
   shootingCooldown: 0
+  isMoving: 1
+  toObject: {fileID: 0}
+  movingSpeed: 1
+  wallsMask:
+    serializedVersion: 2
+    m_Bits: 8193
 --- !u!1 &2232872813006222878
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,18 +6,13 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 2f;
     float timer = 0f;
-    bool hasHit = false;
     public float bulletTimer = 5f;
     public bool goingLeft = false;
     public bool shotByPlayer;
+    public Vector3 direction;
     void Update()
     {
-        if (goingLeft)
-        {
-            gameObject.transform.position += Vector3.left * Time.deltaTime * speed;
-        }
-        else
-        gameObject.transform.position += Vector3.right * Time.deltaTime * speed;
+        gameObject.transform.position += direction * Time.deltaTime * speed;
         timer += Time.deltaTime;
         if (timer >= bulletTimer)
         {
