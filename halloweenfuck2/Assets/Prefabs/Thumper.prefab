@@ -74,7 +74,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ticksToDrop: 1
   ticksToReturn: 5
-  dropLocation: {fileID: 0}
+  dropLocation: {fileID: 1774667444827769376, guid: 4e9042b9f816cc64388754c9daf34dd3,
+    type: 3}
   speed: 0
   speedMultiplierUp: 2.2
   speedMultiplier: 5

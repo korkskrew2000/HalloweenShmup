@@ -189,7 +189,7 @@ MonoBehaviour:
   isOpen: 0
   ticksToOpen: 5
   ticksToClose: 7
-  tm: {fileID: 0}
+  tm: {fileID: 9150442661837696436, guid: 3fc32e8f6211a9141aa38d28e2ad1858, type: 3}
   hatchAnimation: {fileID: 6369246749982706008}
   collider: {fileID: 2169581399901331293}
   trigger: {fileID: 6369246750064077404}
