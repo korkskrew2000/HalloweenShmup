@@ -12,11 +12,13 @@ public class Jumper : MonoBehaviour
     public float jumpSpeed;
     public float jumpCooldown = 3f;
     bool onCooldown = false;
+    public Animator anim;
 
     private void Update()
     {
         if (activated)
         {
+            anim.enabled = true;
             timer += Time.deltaTime;
             if (timer >= jumpTimer)
             {

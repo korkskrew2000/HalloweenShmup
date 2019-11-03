@@ -24,7 +24,7 @@ public class PlayerMover : MonoBehaviour
     public float fallingMultiplier = 3;
     float stoppingSpeed = 0;
     bool isMoving;
-    public float minY = 0;
+    //public float minY = 0;
     public GameObject minYsensor;
     public ChargeShot chargeShot;
     public Animator anim;
@@ -99,9 +99,13 @@ public class PlayerMover : MonoBehaviour
         {
             jumpingSpeed = 0;
         }
-        if (minYsensor.transform.position.y < minY)
+        //if (minYsensor.transform.position.y < minY)
+        //{
+        //    gameObject.transform.position += Vector3.up * Time.deltaTime * maxSpeed;
+        //}
+        if (Physics.Raycast(minYsensor.transform.position, Vector3.down, 0.1f))
         {
-            gameObject.transform.position += Vector3.up * Time.deltaTime * maxSpeed;
+            transform.position += Vector3.up;
         }
         if (isMoving)
         {
@@ -110,11 +114,21 @@ public class PlayerMover : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        notOnGround = true;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) { notOnGround = true; }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        notOnGround = false;
-        stoppingSpeed = stoppingSpeed / 5;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            notOnGround = false;
+            stoppingSpeed = stoppingSpeed / 5;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            notOnGround = false;
+        }
     }
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827903044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.041, y: -0.45, z: 0}
+  m_LocalPosition: {x: -0.041, y: -0.446, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 628448661000706493}
@@ -94,7 +94,6 @@ MonoBehaviour:
   jumpMultiplier: 30
   maxFallingSpeed: 3
   fallingMultiplier: 4
-  minY: 0
   minYsensor: {fileID: 827903044}
   chargeShot: {fileID: 7684087319251962678}
   anim: {fileID: 5423335156953377554}
@@ -105,13 +104,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628448661000706483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: f057cac0d9a6d98459b2ca7ef069ee77, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03377292, y: -0.40012714}
+  m_Offset: {x: -0.045644045, y: -0.39749768}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -122,7 +121,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23374915, y: 0.101643145}
+  m_Size: {x: 0.38039237, y: 0.030390441}
   m_EdgeRadius: 0
 --- !u!61 &9018289834174212285
 BoxCollider2D:
@@ -137,7 +136,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.048349127, y: -0.14915425}
+  m_Offset: {x: -0.04681821, y: -0.012535065}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -148,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3310578, y: 0.39732707}
+  m_Size: {x: 0.3953562, y: 0.8603988}
   m_EdgeRadius: 0
 --- !u!61 &6270748199512116672
 BoxCollider2D:
@@ -157,7 +156,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628448661000706483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -188,7 +187,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
