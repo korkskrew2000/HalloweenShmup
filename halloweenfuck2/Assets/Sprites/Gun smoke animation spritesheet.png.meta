@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: 2afa187094afc8d4c8df3c3d2b8c01dd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2429464398144379449
+    second: Gun smoke animation spritesheet_0
+  - first:
+      213: 5343977587857632267
+    second: Gun smoke animation spritesheet_1
+  - first:
+      213: 2291520579008612625
+    second: Gun smoke animation spritesheet_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,7 +105,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Gun smoke animation spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 50
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e5accc83ad8ec4bbde31dbc9ab567f
+      internalID: 2429464398144379449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun smoke animation spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 51
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dc2c08dcb8d3844a983730a5fbe7b7
+      internalID: 5343977587857632267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun smoke animation spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 23
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18c450c9c84f2b488643f0db0432c1f
+      internalID: 2291520579008612625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

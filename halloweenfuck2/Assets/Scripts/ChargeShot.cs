@@ -10,7 +10,7 @@ public class ChargeShot : MonoBehaviour
     public float newCooldown = 2f;
     public bool isCharging = false;
     public bool isCharged = false;
-    Vector3 shootingOffset = new Vector3(0.35f, 0, 0);
+    Vector3 shootingOffset = new Vector3(0.45f, 0.045f, 0);
     public GameObject chargeShotPrefab;
     bool isLaunching = false;
     float launchTimer = 0;
@@ -24,19 +24,35 @@ public class ChargeShot : MonoBehaviour
     Quaternion rotation = new Quaternion(0, 0, 0, 0);
     bool wasMoving = false;
     float stoppingTime = 1.6f;
+    bool playSFXonce = true;
+    bool playLoopOnce = true;
+    public AudioSource audioS;
+    public AudioSource audioLoop;
+    public AudioClip shootSFX;
 
     private void Awake()
     {
         oldCooldown = playerMover.shootingCooldown;
     }
+    void Charging()
+    {
+        if (playSFXonce)
+        {
+                audioS.Play();
+        }
+        playSFXonce = false;
+        return;
+    }
     void ChargedShot()
     {
+        playSFXonce = true;
         stoppingTime = 1.6f;
         chargeTimer = 0;
         isCharged = false;
         playerMover.canShoot = false;
         playerMover.shootingCooldown = newCooldown;
         isLaunching = true;
+        return;
     }
     private void Update()
     {
@@ -47,6 +63,7 @@ public class ChargeShot : MonoBehaviour
         }
         if (isCharging)
         {
+            Charging();
             chargeTimer += Time.deltaTime;
             if (chargeTimer >= chargeTime)
             {
@@ -56,15 +73,24 @@ public class ChargeShot : MonoBehaviour
         }
         if (isCharged)
         {
+            if (playLoopOnce)
+            {
+                audioLoop.Play();
+                playLoopOnce = false;
+            }
             if (Input.GetKeyUp(KeyCode.X))
             {
                 ChargedShot();
                 Instantiate(chargeShotPrefab, gameObject.transform.position, rotation, bulletsParent);
-                
+                audioLoop.Stop();
+                AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position);
+                playLoopOnce = true;
             }
         }
         if (!isCharged && Input.GetKeyUp(KeyCode.X))
         {
+            audioS.Stop();
+            playSFXonce = true;
             chargeTimer = 0;
             isCharging = false;
         }

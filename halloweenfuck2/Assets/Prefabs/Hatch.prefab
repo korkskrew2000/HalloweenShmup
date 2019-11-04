@@ -194,6 +194,8 @@ MonoBehaviour:
   collider: {fileID: 2169581399901331293}
   trigger: {fileID: 6369246750064077404}
   instaKill: 0
+  open: {fileID: 8300000, guid: 8766f453835991f4cbe05c99451183af, type: 3}
+  close: {fileID: 8300000, guid: b7c36031686f26544a0dbddf9346189b, type: 3}
 --- !u!61 &2169581399901331293
 BoxCollider2D:
   m_ObjectHideFlags: 0

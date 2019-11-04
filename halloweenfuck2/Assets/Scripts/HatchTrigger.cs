@@ -12,15 +12,50 @@ public class HatchTrigger : MonoBehaviour
     public BoxCollider2D collider;
     public BoxCollider2D trigger;
     public bool instaKill = false;
+    public AudioClip open;
+    public AudioClip close;
+    public float soundDistance = 15f;
+    GameObject player;
+    bool closePlayOnce;
+    bool openPlayOnce;
+
+    private void Awake()
+    {
+        player = FindObjectOfType<PlayerMover>().gameObject;
+        openPlayOnce = true;
+    }
+    void Opening()
+    {
+        if (Vector3.Distance(transform.position, player.transform.position) < soundDistance && openPlayOnce)
+        {
+            openPlayOnce = false;
+            AudioSource.PlayClipAtPoint(open, transform.position);
+            closePlayOnce = true;
+            return;
+        }
+    }
+
+    void Closing()
+    {
+        if (Vector3.Distance(transform.position, player.transform.position) < soundDistance && closePlayOnce)
+        {
+            closePlayOnce = false;
+            AudioSource.PlayClipAtPoint(close, transform.position);
+            openPlayOnce = true;
+            return;
+        }
+    }
     private void Update()
     {
         if (tm.ticks == ticksToOpen)
         {
+            Opening();
             isOpen = true;
             hatchAnimation.OpenAnimation();
         }
         if (tm.ticks == ticksToClose)
         {
+            Closing();
             isOpen = false;
             hatchAnimation.CloseAnimation();
         }

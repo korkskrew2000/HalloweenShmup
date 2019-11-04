@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 9018289834174212285}
   - component: {fileID: 628448661000706495}
   - component: {fileID: 7684087319251962678}
+  - component: {fileID: 1954244616}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -84,8 +85,7 @@ MonoBehaviour:
     type: 3}
   shootingCooldown: 0.5
   canShoot: 1
-  bulletParent: {fileID: 7038480184909234841, guid: 3fc3f78893a0aa946b1a28ffda3182f6,
-    type: 3}
+  bulletParent: {fileID: 0}
   notOnGround: 1
   jumping: 0
   maxJumpingSpeed: 1
@@ -95,6 +95,7 @@ MonoBehaviour:
   minYsensor: {fileID: 827903044}
   chargeShot: {fileID: 7684087319251962678}
   anim: {fileID: 5423335156953377554}
+  shootSFX: {fileID: 8300000, guid: 25170d2eceb059c41afc08ff20e3112f, type: 3}
 --- !u!61 &9018289834174212285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161,12 +162,110 @@ MonoBehaviour:
   isCharged: 0
   chargeShotPrefab: {fileID: 1433093788250855395, guid: 3c602c55ee4861745ba9eaa45f58c1dc,
     type: 3}
-  launchTimeLimit: 0.5
+  launchTimeLimit: 0.2
   launchSpeed: 2
   launchMoveSpeedMax: 2
   launchMultiplier: 2
-  bulletsParent: {fileID: 7038480184909234841, guid: 3fc3f78893a0aa946b1a28ffda3182f6,
-    type: 3}
+  bulletsParent: {fileID: 0}
+  audioS: {fileID: 1954244616}
+  audioLoop: {fileID: 0}
+  shootSFX: {fileID: 8300000, guid: 75cc44fddd295d941b5bfa1504cecb0d, type: 3}
+--- !u!82 &1954244616
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628448661000706483}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 50ecd49e7f79e684a9c0e463c398e47b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.858
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &628448661058631299
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +335,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6538516375300721230, guid: 20749fc4c1eb715429a7bc637942a3ce,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -257,7 +356,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628448661058631299}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 318f75b70bb66454a9a41b6e3d00aeb6, type: 2}
   m_CullingMode: 0

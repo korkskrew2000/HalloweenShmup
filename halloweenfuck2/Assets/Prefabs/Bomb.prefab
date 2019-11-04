@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 2
-  explosion: {fileID: 8300000, guid: 75cc44fddd295d941b5bfa1504cecb0d, type: 3}
+  explosion: {fileID: 8300000, guid: 0cbaed6f5ad9c9c47a2da599e20433c6, type: 3}
   trigger: {fileID: 7643619291489265335}
 --- !u!58 &7643619291489265335
 CircleCollider2D:

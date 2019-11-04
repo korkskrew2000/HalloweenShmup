@@ -28,9 +28,11 @@ public class PlayerMover : MonoBehaviour
     public GameObject minYsensor;
     public ChargeShot chargeShot;
     public Animator anim;
+    public AudioClip shootSFX;
 
     void Update()
     {
+        if (isMoving) { print("is moving"); }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             speed = 0;
@@ -46,11 +48,11 @@ public class PlayerMover : MonoBehaviour
             stoppingSpeed = 0.3f;
             isMoving = true;
         }
+        else isMoving = false;
         if (Input.GetKeyUp(KeyCode.Z) && jumping)
         {
             stoppingSpeed = stoppingSpeed * 5;
         }
-        else isMoving = false;
         if (!isMoving)
         {
             gameObject.transform.position += Vector3.right * Time.deltaTime * stoppingSpeed;
@@ -64,6 +66,7 @@ public class PlayerMover : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.X) && canShoot && !chargeShot.isCharged)
         {
             Instantiate(bulletPrefab, gameObject.transform.position + shootingOffset, rotation, bulletParent);
+            AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position);
             canShoot = false;
         }
         if (!canShoot)

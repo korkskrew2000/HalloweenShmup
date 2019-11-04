@@ -5,20 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    int nextRoom;
-    Random rnd = new Random();
-    int ezRnd;
-    int medRnd;
-    int hardRnd;
-    bool isEz;
-    bool isMed;
-    bool isHard;
-    public int roomNumber;
-    List<int> roomList = new List<int> { };
     public GameObject lastEntry;
     public int lives = 3;
     public GameObject player;
     public Vector3 offset;
+    public AudioClip deathSFX;
     
     public void PlayerHit()
     {
@@ -29,9 +20,17 @@ public class GameManager : MonoBehaviour
         //} else
         //lives--;
         player.transform.position = lastEntry.transform.position + offset;
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
         player.GetComponent<PlayerMover>().notOnGround = true;
         player.GetComponent<PlayerMover>().jumping = false;
+    }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     //void GameOver()
     //{

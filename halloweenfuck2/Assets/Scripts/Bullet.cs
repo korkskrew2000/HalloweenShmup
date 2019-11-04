@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
         }
         if (isCharged)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Default"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Default") || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
                 Destroy(gameObject);
             }

@@ -13,11 +13,18 @@ public class Jumper : MonoBehaviour
     public float jumpCooldown = 3f;
     bool onCooldown = false;
     public Animator anim;
+    public AudioClip boingSFX;
+    bool playSFXonce = false;
 
     private void Update()
     {
         if (activated)
         {
+            if (playSFXonce)
+            {
+                AudioSource.PlayClipAtPoint(boingSFX, Camera.main.transform.position);
+            }
+            playSFXonce = false;
             anim.enabled = true;
             timer += Time.deltaTime;
             if (timer >= jumpTimer)
@@ -28,7 +35,8 @@ public class Jumper : MonoBehaviour
             }
         }
         if (onCooldown)
-            { 
+            {
+            playSFXonce = true;
         timer2 += Time.deltaTime;
             if (timer2 > jumpCooldown)
             {

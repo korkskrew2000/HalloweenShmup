@@ -48,6 +48,9 @@ MonoBehaviour:
   player: {fileID: 0}
   entryPoint: {fileID: 0}
   offset: {x: 0, y: 0.3, z: 0}
+  nextRoom: {fileID: 0}
+  previousRoom: {fileID: 0}
+  dingSFX: {fileID: 8300000, guid: 95791e818f720c543a237c59a51b31ce, type: 3}
 --- !u!61 &2713367133819810326
 BoxCollider2D:
   m_ObjectHideFlags: 0

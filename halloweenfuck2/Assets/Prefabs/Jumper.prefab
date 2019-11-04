@@ -74,8 +74,9 @@ MonoBehaviour:
   jumpTimer: 0.3
   player: {fileID: 0}
   jumpSpeed: 6
-  jumpCooldown: 3
+  jumpCooldown: 0
   anim: {fileID: 1226669022199075792}
+  boingSFX: {fileID: 8300000, guid: 36de32ab667827c48b7ec9092b0d1562, type: 3}
 --- !u!1 &8070634079105529031
 GameObject:
   m_ObjectHideFlags: 0

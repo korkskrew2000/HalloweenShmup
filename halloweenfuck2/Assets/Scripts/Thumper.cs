@@ -15,11 +15,11 @@ public class Thumper : MonoBehaviour
     public float speedMax;
     bool isDropping = false;
     bool isReturning = false;
-
+    public bool reversed = false;
     void Dropping()
     {
         speed += Time.deltaTime * speedMultiplier;
-        transform.position += Vector3.down * Time.deltaTime* speed;
+        transform.position += Vector3.down * Time.deltaTime * speed;
         if (speed >= speedMax)
         {
             speed = speedMax;
@@ -40,6 +40,7 @@ public class Thumper : MonoBehaviour
         {
             speed = speedMax;
         }
+        
         if (Vector3.Distance(transform.position, origPos) < 0.1f)
         {
             speed = 0;
