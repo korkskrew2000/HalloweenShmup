@@ -135,12 +135,12 @@ PrefabInstance:
     - target: {fileID: 628448661000706493, guid: 96734793d366a6c48b47c7de8541ecc8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.93
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 628448661000706493, guid: 96734793d366a6c48b47c7de8541ecc8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.33
+      value: 6.66
       objectReference: {fileID: 0}
     - target: {fileID: 628448661000706493, guid: 96734793d366a6c48b47c7de8541ecc8,
         type: 3}
@@ -693,6 +693,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7038480184909234840, guid: 3fc3f78893a0aa946b1a28ffda3182f6,
+        type: 3}
+      propertyPath: m_Name
+      value: Bullets(Parent)
+      objectReference: {fileID: 0}
     - target: {fileID: 7038480184909234841, guid: 3fc3f78893a0aa946b1a28ffda3182f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -747,11 +752,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7038480184909234840, guid: 3fc3f78893a0aa946b1a28ffda3182f6,
-        type: 3}
-      propertyPath: m_Name
-      value: Bullets(Parent)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fc3f78893a0aa946b1a28ffda3182f6, type: 3}
@@ -1103,6 +1103,11 @@ PrefabInstance:
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 1588593428472074171, guid: 09cca961bc8b8404194af9ab98ab477b,
+        type: 3}
+      propertyPath: dingSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 95791e818f720c543a237c59a51b31ce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09cca961bc8b8404194af9ab98ab477b, type: 3}
 --- !u!1 &612713379 stripped
@@ -1378,6 +1383,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.896
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560234046620860000, guid: 5749833e7def16b44933118ea66f72fc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851652073733273189, guid: 5749833e7def16b44933118ea66f72fc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5749833e7def16b44933118ea66f72fc, type: 3}

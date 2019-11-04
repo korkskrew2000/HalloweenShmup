@@ -32,6 +32,7 @@ public class ChargeShot : MonoBehaviour
 
     private void Awake()
     {
+        launchMoveSpeed = launchSpeed;
         oldCooldown = playerMover.shootingCooldown;
     }
     void Charging()
@@ -118,6 +119,7 @@ public class ChargeShot : MonoBehaviour
         }
         if (!isLaunching && wasMoving)
         {
+            launchSpeed = launchMoveSpeed;
             gameObject.transform.position += Vector3.left * Time.deltaTime * stoppingTime;
             stoppingTime -= Time.deltaTime * 1.3f;
             if (stoppingTime < 0.1f)
